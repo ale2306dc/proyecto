@@ -19,7 +19,7 @@ const tracks = document.querySelector("#tracks");
 
 function obtenerDatos() {
     
-    const url = "http://localhost:3000/api/songs";
+    const url = "/api/songs";
 
     fetch(url)
         .then(respuesta => respuesta.json())

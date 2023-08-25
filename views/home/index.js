@@ -1,6 +1,6 @@
 function obtenerDatos() {
     
-    const url = "http://localhost:3000/api/songs";
+    const url = "/api/songs";
 
     fetch(url)
         .then(respuesta => respuesta.json())
@@ -8,6 +8,10 @@ function obtenerDatos() {
         .catch(error => console.log(error));
 
 };
+
+if (localStorage.getItem()) {
+    
+}
 
 obtenerDatos();
 
