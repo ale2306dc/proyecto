@@ -71,7 +71,6 @@ function mostrarDatos(datos){
         </div>
     
     `
-    clickSong()
 
     tracks.appendChild(songElmnt);
 
