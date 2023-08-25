@@ -1,10 +1,12 @@
 const btnSi = document.querySelector("#si")
 const btnNo = document.querySelector("#no")
+const hash = window.location.href.split('#').pop();
 
 btnSi.addEventListener("click", () => {
 
-    fetch("/api/songs", {method : "DELETE"})
+    fetch(`/api/songs/${hash}`, {method : "DELETE"})
     window.location.href = "/admin/"
+    
 
 })
 

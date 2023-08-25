@@ -17,6 +17,12 @@ if (localStorage.getItem("_id") == 1689800145675) {
 
 }
 
+const subirCanciones = document.querySelector("#subirCanciones");
+const adminCanciones = document.querySelector("#admin");
+
+subirCanciones.addEventListener("click", () => {window.location.href = "/upload"})
+adminCanciones.addEventListener("click", () => {window.location.href = "/admin"})
+
 obtenerDatos();
 
 function mostrarDatos(data){

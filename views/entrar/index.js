@@ -189,7 +189,7 @@ formReg.addEventListener("submit", async e => {
     formLog.addEventListener("submit", async e => {
         e.preventDefault();
 
-        const url = "/api/users/"
+        const url = "/api/users"
         const response = await fetch(url, {method: "GET"});
         const users = await response.json();
         const email = users.find(user => user.email === loginEmail.value);
@@ -204,7 +204,7 @@ formReg.addEventListener("submit", async e => {
                 if (pass) {
                     localStorage.setItem('_id', `${email._id}`);
                     localStorage.setItem('user', `${email.user}`);
-                    window.location.href = "/home/"
+                    window.location.href = "../home/index.html"
                 } else {
                     mostrarMensaje("Email o contraseña incorrecta, vuelva a intentar", "error");
                 }

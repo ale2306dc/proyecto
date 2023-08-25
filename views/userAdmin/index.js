@@ -79,7 +79,7 @@ function mostrarDatos(datos){
         <p class="font-semibold text-xl">${datos.title}</p>
         <p>${datos.artist}</p>
         <div class="flex flex-row gap-3">
-            <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer">
+            <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer" href="/delete#${datos.id}">
                 Eliminar
             </a>
         </div>
