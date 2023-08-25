@@ -90,7 +90,7 @@ function mostrarDatos(datos){
     tracks.appendChild(songElmnt);
 
 }
-
+/*
 function clickSong(){
 
     const song = [...document.querySelectorAll(".songElmnr")];
@@ -113,7 +113,7 @@ function clickSong(){
         });
 
     });
-}
+}*/
 
 function mostrarMensaje(mensaje,tipo){
 

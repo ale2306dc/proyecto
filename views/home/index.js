@@ -9,8 +9,12 @@ function obtenerDatos() {
 
 };
 
-if (localStorage.getItem()) {
+if (localStorage.getItem("_id") == 1689800145675) {
     
+    const admin = document.querySelector("#admin")
+
+    admin.classList.remove("hidden")
+
 }
 
 obtenerDatos();
