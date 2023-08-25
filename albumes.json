@@ -1,0 +1,134 @@
+{
+  "albumes": [
+    {
+      "id": 1,
+      "title": "DYNAMO",
+      "artist": "Soda Stereo",
+      "year": 1992,
+      "genre": "Rock",
+      "image": "Dynamo.jpg",
+      "description": "Dynamo es el sexto álbum de estudio del grupo musical de Argentina Soda Stereo. Fue grabado y mezclado en el Estudio Supersónico, en Buenos Aires durante el año 1992. Es considerado por muchos como uno de los mejores álbumes de estudio del grupo.​​",
+      "songsId": 1
+    },
+    {
+      "id": 2,
+      "title": "TOXICITY",
+      "artist": "System of a Down",
+      "year": 2001,
+      "genre": "Metal",
+      "image": "Toxicity.jpg",
+      "description": "Toxicity es el segundo álbum de estudio de la banda System of a Down. Publicado el 4 de septiembre de 2001 por American Recordings, este CD tuvo gran éxito internacional, al vender más de 12 millones de copias a nivel mundial, y dio a conocer a la banda en todo el mundo.​​",
+      "songsId": 2
+    },
+    {
+      "id": 3,
+      "title": "IOWA",
+      "artist": "Slipknot",
+      "year": 2002,
+      "genre": "Metal",
+      "image": "Iowa.jpg",
+      "description": "Iowa es el segundo álbum de estudio de la banda estadounidense de metal alternativo Slipknot, lanzado a través de Roadrunner Records el 28 de agosto de 2001. La producción corrió a cargo de Ross Robinson y la misma banda.",
+      "songsId": 3
+    },
+    {
+      "id": 4,
+      "title": "EL JARDIN DE LOS PRESENTES",
+      "artist": "Invisible",
+      "year": 1976,
+      "genre": "Rock",
+      "image": "El_Jardin_de_los_Presentes.jpg",
+      "description": "El jardín de los presentes es el tercer y último álbum de estudio de la banda argentina Invisible, en su segunda etapa como cuarteto, integrada por Luis Alberto Spinetta, Machi Rufino, Pomo Lorenzo y Tomás Gubitsch, y el noveno en el que tiene participación decisiva Spinetta.​",
+      "songsId": 4
+    },
+    {
+      "id": 5,
+      "title": "HUMBUG",
+      "artist": "Arctic Monkeys",
+      "year": 2009,
+      "genre": "Indie",
+      "image": "Humbug.jpg",
+      "description": "Humbug es el tercer álbum de estudio de la banda inglesa de indie rock​​ Arctic Monkeys lanzado el 19 de agosto de 2009 por Domino Records. La banda comenzó a escribir canciones para el álbum a partir del verano de 2008, y lo terminó completamente en primavera del 2009.",
+      "songsId": 5
+    }
+  ],
+  "songs": [
+    {
+      "id": 1,
+      "albumId": 1,
+      "artist": "Soda Stereo",
+      "title": "FUÉ",
+      "audio": "Fue.mp3",
+      "image": "Dynamo.jpg",
+      "lenght": "3:20"
+    },
+    {
+      "id": 2,
+      "albumId": 2,
+      "artist": "System of a Down",
+      "title": "AERIALS",
+      "image": "Toxicity.jpg",
+      "lenght": "3:20",
+      "audio": "Aerials.mp3"
+    },
+    {
+      "id": 3,
+      "albumId": 3,
+      "artist": "Slipknot",
+      "title": "PEOPLE = SHIT",
+      "image": "Iowa.jpg",
+      "lenght": "3:20",
+      "audio": "People_Shit.mp3"
+    },
+    {
+      "id": 4,
+      "albumId": 4,
+      "artist": "Invisible",
+      "title": "DOSCIENTOS AÑOS",
+      "image": "El_Jardin_de_los_Presentes.jpg",
+      "audio": "Doscientos_Anos.mp3",
+      "lenght": "3:20"
+    },
+    {
+      "id": 5,
+      "albumId": 5,
+      "artist": "Arctic Monkeys",
+      "title": "CORNERSTONE",
+      "audio": "Cornerstone.mp3",
+      "image": "Humbug.jpg",
+      "lenght": "3:20"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "1234",
+      "password": "1234",
+      "email": "1234@1234.com"
+    },
+    {
+      "email": "dsdssds",
+      "id": 2,
+      "password": "dsasas",
+      "username": {}
+    },
+    {
+      "email": "12457890",
+      "id": 3,
+      "password": "12345678",
+      "username": "123456712345678"
+    },
+    {
+      "email": "ale.2306.dc@gmail.com",
+      "id": 1685840506407,
+      "password": "hola",
+      "username": "ale.hpf"
+    },
+    {
+      "email": "email@email.com",
+      "id": 1685840605790,
+      "password": "admin",
+      "username": "user",
+      "pfp":"profile.webp"
+    }
+  ]
+}

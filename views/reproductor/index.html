@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex justify-center items-center">
+
+    <button id="1" class="songElmnt">1</button>
+    <button id="2" class="songElmnt">2</button>
+    <button id="3" class="songElmnt">3</button>
+    <button id="4" class="songElmnt">4</button>
+    <button id="5" class="songElmnt">5</button>
+
+    <div class="flex justify-center">
+        <div class="h-[auto] w-[auto] my-[10rem] rounded-3xl bg-indigo-700 border-indigo-500 border-[.5rem] flex flex-col justify-center shadow-2xl shadow-black">
+
+            <div>
+                <audio src="/uploads/audio/Cornerstone.mp3" id="audio"></audio>
+            </div>
+
+            <div class="my-3 flex justify-center">
+            <div id="image">
+            </div>
+            </div>
+            <div id="dataText" class=" gap-3 flex flex-row justify-between mx-4 my-4 items-end">
+                <div id="title" class="text-[2rem] font-bold text-slate-300">
+                 </div>
+            <div><p id="artist" class="text-sm text-slate-300"></p></div>
+                
+            </div>
+    
+            <div id="progress" class=" flex justify-center">
+                <progress class="w-[100%] m-3 transition ease-in-out" value="0" max="100"></progress>
+            </div>
+
+            <div id="controles" class="flex flex-row justify-center gap-16 mx-4 my-2">
+    
+                <div id="play_pause" class="bg-indigo-950 flex justify-center rounded-full h-[4.5rem] w-[4.5rem] items-center hover:cursor-pointer hover:bg-indigo-900 hover:translate-y-1 transition ease-in-out border-[.3rem] border-indigo-900">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-white w-10 h-10">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
+                        <!-- <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />      -->
+                    </svg>
+                </div>
+
+            </div>     
+                
+        </div>
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
