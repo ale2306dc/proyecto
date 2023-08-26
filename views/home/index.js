@@ -1,6 +1,6 @@
 function obtenerDatos() {
     
-    const url = "/api/songs";
+    const url = "http://localhost:3000/api/songs";
 
     fetch(url)
         .then(respuesta => respuesta.json())
@@ -27,7 +27,7 @@ if (localStorage.getItem("_id") == "admin") {
 
     const btnContainer = document.querySelector("#btnContainer");
 
-    btnContainer.classList.remove("justify-between","grid-cols-2")
+    btnContainer.classList.remove("justify-between","md:grid-cols-2")
     btnContainer.classList.add("justify-center")
 
 }

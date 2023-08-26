@@ -1,19 +1,3 @@
-// const album = document.querySelector("#album");
-// const track = document.querySelector("#track")
-
-// album.addEventListener("input", ()=>{
-    
-//     console.log(album.value);
-
-//     if (album.value !== "default") {
-//         track.classList.remove("hidden");
-//     }else{
-//         track.classList.add("hidden");
-//     }
-
-// })
-
-let id;
 
 if(localStorage.getItem("_id") == null){
 
@@ -38,7 +22,7 @@ const tracks = document.querySelector("#tracks");
 
 function obtenerDatos() {
     
-    const url = "/api/songs";
+    const url = "http://localhost:3000/api/songs";
 
     fetch(url)
         .then(respuesta => respuesta.json())
@@ -98,88 +82,26 @@ function mostrarDatos(datos){
 
     songElmnt.innerHTML = `
     
-        <div class="h-12 w-12">
-            <img src="/images/${datos.img}" alt="">
-        </div>
+    <div class="h-12 w-12">
+    <img src="/images/${datos.img}" alt="">
+ </div>
 
-        <p class="font-semibold text-xl">${datos.title}</p>
-        <p>${datos.artist}</p>
-        <div class="flex flex-row gap-3">
-            <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer" href="/delete/#${datos.id}">
-                Eliminar
-            </a>
-        </div>
+ <p class="font-semibold text-xl">${datos.title}</p>
+ <p>${datos.artist}</p>
+ <div class="flex flex-row gap-3">
+     <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer" href="/delete/#${datos.id}">
+        
+         <div class="hidden md:block">Eliminar</div>
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="md:hidden w-6 h-6">
+<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+</svg>
+
+     </a>
+
+ </div>
     
     `
-    clickSong()
 
     tracks.appendChild(songElmnt);
-
-}
-
-function clickSong(){
-
-    const song = [...document.querySelectorAll(".songElmnr")];
-
-    console.log(song);
-
-    song.forEach(song => {
-
-        console.log(song)
-        
-        song.addEventListener("click", e =>{
-
-        console.log(e);
-            // await fetch(`http://localhost:3000/api/songs/${id}`, {method : "DELETE"})
-            //     .then(res => res.json())
-            //     .then(data => console.log(data))
-            //     .catch(err => console.error(err))
-
-            // mostrarMensaje("success", "se ha eliminado satisfactoriamente");
-        });
-
-    });
-}
-
-function mostrarMensaje(mensaje,tipo){
-
-    // if (tipo == "error") {
-    //     alert(mensaje)
-    // }
-    
-    // if (tipo == "success"){
-    //     alert(mensaje)
-    // }
-
-    const divMensaje = document.querySelector("#mensaje");
-
-    if (tipo == "error") {
-        divMensaje.innerHTML=`
-        <div class="max-w-4xl">
-            <div class="px-6 py-3 mb-4 text-lg text-white text-center rounded-lg bg-red-500 font-bold" role="alert">
-                ${mensaje}
-            </div>
-        </div>
-    `
-
-    setTimeout(() => {
-        divMensaje.innerHTML=""
-    }, 3000);
-    } 
-
-    if (tipo === "success") {
-        
-        divMensaje.innerHTML=`
-        <div class="max-w-4xl">
-            <div class="px-6 py-3 mb-4 text-lg text-white text-center rounded-lg bg-green-500 font-bold" role="alert">
-                ${mensaje}
-            </div>
-        </div>
-    `
-
-    setTimeout(() => {
-        divMensaje.innerHTML=""
-    }, 3000);
-    }
 
 }

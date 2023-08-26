@@ -58,7 +58,7 @@ setTimeout(() => {
 
 function obtenerSong(){
 
-    const  url = "/api/songs";
+    const  url = "http://localhost:3000/api/songs";
 
     console.log(url);
 
