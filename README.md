@@ -13,11 +13,11 @@
 
 - Puedes instalar todas estas dependencias a la vez usando el comando _npm install_ seguido de la(s) dependencia(s) que desees instalar
 
-##Link 
+## Link 
 
 - https://proyectoedt.onrender.com
 
-##Acceso como administrador
+## Acceso como administrador
 
 - clave: admin
 - email: admin
