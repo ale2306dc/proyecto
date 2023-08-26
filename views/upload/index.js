@@ -3,8 +3,8 @@ const cover = document.querySelector("#image");
 const audio = document.querySelector("#audio");
 const form = document.querySelector("#form");
 
-const urlAudio = "http://localhost:3000/api/audio/";
-const urlImg = "http://localhost:3000/api/images/";
+const urlAudio = "/api/audio/";
+const urlImg = "/api/images/";
 
 const btnUpload = document.querySelector("#btnUpload");
 
@@ -181,7 +181,7 @@ async function subirCancion(objCancion){
 
   console.log(objCancion);
 
-  const urlCancion = "http://localhost:3000/api/songs"
+  const urlCancion = "/api/songs"
 
   let test = 
      {

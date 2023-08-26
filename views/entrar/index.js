@@ -103,7 +103,7 @@ formReg.addEventListener("submit", async e => {
 
     }
 
-    const url = "http://localhost:3000/api/users"
+    const url = "/api/users"
     const response = await fetch(url);
     const users = await response.json();
     const email = users.find(users => users.email === signEmail.value);
@@ -168,7 +168,7 @@ formReg.addEventListener("submit", async e => {
     formLog.addEventListener("submit", async e => {
         e.preventDefault();
 
-        const url = "http://localhost:3000/api/users"
+        const url = "/api/users"
         const response = await fetch(url, {method: "GET"});
         const users = await response.json();
         const email = users.find(user => user.email === loginEmail.value);

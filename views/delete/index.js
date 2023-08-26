@@ -3,7 +3,7 @@ const hash = window.location.href.split('#').pop();
 
 function obtenerDatos(){
 
-    fetch("http://localhost:3000/api/songs")
+    fetch("/api/songs")
         .then(res => res.json())
         .then(data => rellenarObj(data))
         .catch(err => console.error(err))
@@ -54,7 +54,7 @@ const btnNo = document.querySelector("#no");
 
 btnSi.addEventListener("click", () => {
 
-    fetch(`http://localhost:3000/api/songs/${hash}`, {method:"DELETE"})
+    fetch(`/api/songs/${hash}`, {method:"DELETE"})
     .then(()=>{window.location.href="/admin/";})
 
 })
