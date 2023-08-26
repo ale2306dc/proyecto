@@ -15,6 +15,25 @@
 
 let id;
 
+if(localStorage.getItem("_id") == null){
+
+    window.location.href="/"
+
+}
+if (localStorage.getItem("_id") != "admin") {
+    window.location.href = "/home/"
+}
+
+const cerrarSesion = document.querySelector("#cerrarSesion")
+
+cerrarSesion.addEventListener("click", () => {
+
+    localStorage.removeItem("_id")
+    localStorage.removeItem("user")
+    window.location.href = "/"
+
+})
+
 const tracks = document.querySelector("#tracks");
 
 function obtenerDatos() {
@@ -33,6 +52,13 @@ function rellenarObj(cancion){
 
     console.log(cancion)
 
+    if (cancion == "") {
+       const text = document.querySelector("#texto")
+
+       text.classList.remove("hidden")
+
+       text.innerHTML = "No se ha encontrado ninguna canción"
+    }
 
     cancion.forEach(cancion => {
 
@@ -79,7 +105,7 @@ function mostrarDatos(datos){
         <p class="font-semibold text-xl">${datos.title}</p>
         <p>${datos.artist}</p>
         <div class="flex flex-row gap-3">
-            <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer" href="/delete#${datos.id}">
+            <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer" href="/delete/#${datos.id}">
                 Eliminar
             </a>
         </div>
@@ -90,7 +116,7 @@ function mostrarDatos(datos){
     tracks.appendChild(songElmnt);
 
 }
-/*
+
 function clickSong(){
 
     const song = [...document.querySelectorAll(".songElmnr")];
@@ -113,7 +139,7 @@ function clickSong(){
         });
 
     });
-}*/
+}
 
 function mostrarMensaje(mensaje,tipo){
 

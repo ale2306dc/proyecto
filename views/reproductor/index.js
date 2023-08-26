@@ -53,7 +53,7 @@ setTimeout(() => {
 
     clickSong()
 
-}, 500);
+}, 200);
 
 
 function obtenerSong(){

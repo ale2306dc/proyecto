@@ -6,9 +6,7 @@ const path = require('path');
 
 
 const usersRouter = require('./controllers/users.js');
-const albumsRouter = require('./controllers/albums.js');
 const audioRouter = require('./controllers/audio.js');
-const plstRouter = require('./controllers/playlist.js');
 const imgRouter = require('./controllers/images.js');
 const songsRouter = require('./controllers/songs.js');
 
@@ -26,7 +24,7 @@ const songsRouter = require('./controllers/songs.js');
 
 // //rutas frontend
 
-app.use("/main", express.static(path.resolve("views", "main")));
+app.use("/", express.static(path.resolve("views", "main")));
 app.use("/home", express.static(path.resolve("views", "home")));
 app.use("/images", express.static(path.resolve("uploads", "img")));
 app.use("/audios", express.static(path.resolve("uploads", "audio")));
@@ -44,9 +42,7 @@ app.use(express.json());
 
 // //Rutas Backend
 app.use('/api', usersRouter)
-app.use('/api', albumsRouter)
 app.use('/api', imgRouter)
-app.use('/api', plstRouter)
 app.use('/api', songsRouter);
 app.use('/api', audioRouter)
 

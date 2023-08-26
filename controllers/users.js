@@ -43,8 +43,8 @@ usersRouter.patch("/users/:id", (req,res) => {
 });
 
 //DELETE Users
-usersRouter.delete("/users/", (req,res) => {
-    const user =  User.findOneAndDelete(req.body)
+usersRouter.delete("/users/:_id", (req,res) => {
+    const user =  User.findByIdAndDelete(req.params._id)
 
     user 
         .then((user) => {

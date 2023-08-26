@@ -139,27 +139,6 @@ formReg.addEventListener("submit", async e => {
                         .catch(err => console.log(err))
                     mostrarMensaje("Se ha registrado exitosamente", "success");
 
-                    const objPlaylist = {
-
-                        _id:objForm._id,
-                        user:objForm.user
-
-                    }
-
-                    fetch("http://localhost:3000/api/playlist", {
-
-                        method: "POST",
-                        headers: {
-
-                            "Content-Type" : "application/json"
-
-                        },
-                        body:JSON.stringify(objPlaylist)
-
-                    }).then(res => res.json())
-                      .then(data => console.log(data))
-                      .then(err => console.log(err));
-
                     signEmail.value = "";
                     signPass.value = "" ;
                     signUser.value = ""; 
@@ -204,7 +183,7 @@ formReg.addEventListener("submit", async e => {
                 if (pass) {
                     localStorage.setItem('_id', `${email._id}`);
                     localStorage.setItem('user', `${email.user}`);
-                    window.location.href = "../home/index.html"
+                    window.location.href = "/home/"
                 } else {
                     mostrarMensaje("Email o contraseña incorrecta, vuelva a intentar", "error");
                 }

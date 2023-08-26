@@ -8,6 +8,22 @@ const urlImg = "/api/images/";
 
 const btnUpload = document.querySelector("#btnUpload");
 
+const cerrarSesion = document.querySelector("#cerrarSesion")
+
+cerrarSesion.addEventListener("click", () => {
+
+    localStorage.removeItem("_id")
+    localStorage.removeItem("user")
+    window.location.href = "/"
+
+})
+
+if(localStorage.getItem("_id") == null){
+
+  window.location.href="/"
+
+}
+
 cover.addEventListener("change", () => {
 
   const files = cover.files[0];

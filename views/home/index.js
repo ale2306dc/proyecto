@@ -9,25 +9,53 @@ function obtenerDatos() {
 
 };
 
-if (localStorage.getItem("_id") == 1689800145675) {
-    
-    const admin = document.querySelector("#admin")
+if(localStorage.getItem("_id") == null){
 
-    admin.classList.remove("hidden")
+    window.location.href="/"
 
 }
 
-const subirCanciones = document.querySelector("#subirCanciones");
-const adminCanciones = document.querySelector("#admin");
+const welcome = document.querySelector("#welcome")
 
-subirCanciones.addEventListener("click", () => {window.location.href = "/upload"})
-adminCanciones.addEventListener("click", () => {window.location.href = "/admin"})
+welcome.innerHTML = `Bienvenido, ${localStorage.getItem("user")}`
+
+if (localStorage.getItem("_id") == "admin") {
+    const admin = document.querySelector("#admin")
+
+    admin.classList.remove("hidden")
+} else {
+
+    const btnContainer = document.querySelector("#btnContainer");
+
+    btnContainer.classList.remove("justify-between","grid-cols-2")
+    btnContainer.classList.add("justify-center")
+
+}
+
+const cerrarSesion = document.querySelector("#cerrarSesion")
+
+cerrarSesion.addEventListener("click", () => {
+
+    localStorage.removeItem("_id")
+    localStorage.removeItem("user")
+    window.location.href = "/"
+
+})
 
 obtenerDatos();
 
 function mostrarDatos(data){
 
     console.log(data)
+
+    if (data == "") {
+        const text = document.querySelector("#texto")
+ 
+        text.classList.remove("hidden")
+
+        text.innerHTML = "No se ha encontrado ninguna canción"
+     }
+ 
 
     data.forEach(song => {
         

@@ -44,7 +44,7 @@ songsRouter.patch("/songs/:_id", (req,res) => {
 
 //DELETE Users
 songsRouter.delete("/songs/:_id", (req,res) => {
-    const song =  Song.findOneAndDelete(req.params._id)
+    const song =  Song.findByIdAndDelete(req.params._id)
 
     song 
         .then((song) => {
