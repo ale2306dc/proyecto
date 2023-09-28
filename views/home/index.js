@@ -9,11 +9,11 @@ function obtenerDatos() {
 
 };
 
-if(localStorage.getItem("_id") == null){
+// if(localStorage.getItem("_id") == null){
 
-    window.location.href="/"
+//     window.location.href="/"
 
-}
+// }
 
 const welcome = document.querySelector("#welcome")
 
@@ -73,11 +73,8 @@ function mostrarDatos(data){
 
         dataElmnt.innerHTML = `
         
-        <div class="flex imgBlur justify-center items-center">
-                <img id="${song._id}" class="img_song rounded-sm transition ease-in-out duration-500" src="/images/${song.imgSrc}" alt="">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-14 h-14 absolute bg-white rounded-md hidden hover:bg-indigo-700 hover:text-white duration-500 transition ease-in-out">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 16.875h3.375m0 0h3.375m-3.375 0V13.5m0 3.375v3.375M6 10.5h2.25a2.25 2.25 0 002.25-2.25V6a2.25 2.25 0 00-2.25-2.25H6A2.25 2.25 0 003.75 6v2.25A2.25 2.25 0 006 10.5zm0 9.75h2.25A2.25 2.25 0 0010.5 18v-2.25a2.25 2.25 0 00-2.25-2.25H6a2.25 2.25 0 00-2.25 2.25V18A2.25 2.25 0 006 20.25zm9.75-9.75H18a2.25 2.25 0 002.25-2.25V6A2.25 2.25 0 0018 3.75h-2.25A2.25 2.25 0 0013.5 6v2.25a2.25 2.25 0 002.25 2.25z" />
-                </svg>
+        <div class="flex imgBlur justify-center h-[10.5rem] w-[10.5rem] items-center">
+                <img id="${song._id}" class="img_song rounded-sm  h-[10.5rem] w-[10.5rem] transition ease-in-out duration-500" src="/images/${song.imgSrc}">
             </div>
                         
         <p id="${song._id}" class="title_song font-bold mt-3 text-lg">${song.title}</p>

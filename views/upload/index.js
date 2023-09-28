@@ -181,6 +181,8 @@ async function subirCancion(objCancion){
 
   console.log(objCancion);
 
+  mostrarSpinner()
+
   const urlCancion = "/api/songs"
 
   let test = 
@@ -254,3 +256,19 @@ function mostrarMensaje(mensaje,tipo){
 
 }
 
+function mostrarSpinner(){
+
+  const mensaje = document.querySelector("#mensaje")
+  const spinner = document.createElement('div');
+  spinner.classList.add('spinner');
+
+  spinner.innerHTML = `
+  
+  <div class = "bounce1"></div>
+  <div class = "bounce2"></div>
+  <div class = "bounce3"></div>
+  
+  `
+
+  mensaje.appendChild(spinner)
+}

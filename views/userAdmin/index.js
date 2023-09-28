@@ -83,7 +83,7 @@ function mostrarDatos(datos){
     songElmnt.innerHTML = `
     
     <div class="h-12 w-12">
-    <img src="/images/${datos.img}" alt="">
+    <img  class="h-12 w-12" src="/images/${datos.img}" alt="">
  </div>
 
  <p class="font-semibold text-xl">${datos.title}</p>
