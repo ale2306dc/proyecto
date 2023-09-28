@@ -15,7 +15,7 @@
 
 ## Link 
 
-- https://loudproyectoedt.onrender.com
+- https://proyectoedt.onrender.com
 
 ## Acceso como administrador
 
