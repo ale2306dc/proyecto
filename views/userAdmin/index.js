@@ -166,7 +166,7 @@ function mostrarDatosUser(datos){
 
  <p class="font-semibold text-xl">${datos.name}</p>
  <p>${datos.email}</p>
- <p>${datos.id}</p>
+ <p class="hidden md:block">${datos.id}</p>
  <div class="flex flex-row gap-3">
      <a id=${datos.id} class="songElmnr hover:bg-red-600 py-1 px-3 transition ease-in-out rounded-sm duration-300 cursor-pointer" href="/deleteUser/#${datos.id}">
         
