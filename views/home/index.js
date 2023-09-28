@@ -9,11 +9,11 @@ function obtenerDatos() {
 
 };
 
-// if(localStorage.getItem("_id") == null){
+if(localStorage.getItem("_id") == null){
 
-//     window.location.href="/"
+     window.location.href="/"
 
-// }
+}
 
 const welcome = document.querySelector("#welcome")
 
