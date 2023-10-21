@@ -22,6 +22,16 @@ const songSchema = new mongoose.Schema({
         type:String,
         required:true
     },
+    profe: {
+        type:String,
+        required:true
+    }
+    ,
+    aula: {
+        type:String,
+        required:true
+    }
+    ,
     user: {
         type:String,
         required:true

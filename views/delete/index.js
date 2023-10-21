@@ -55,12 +55,22 @@ const btnNo = document.querySelector("#no");
 btnSi.addEventListener("click", () => {
 
     fetch(`/api/songs/${hash}`, {method:"DELETE"})
-    .then(()=>{window.location.href="/admin/";})
+    .then(()=>{
+        if (localStorage.getItem("_id") == "admin") {
+        window.location.href="/admin/"
+    }else {
+        window.location.href=`/user/#${localStorage.getItem("_id")}`
+    };
+}); 
 
 })
 
 btnNo.addEventListener("click", () => {
 
-    window.location.href="/admin/"
+    if (localStorage.getItem("_id") == "admin") {
+        window.location.href="/admin/"
+    }else {
+        window.location.href=`/user/#${localStorage.getItem("_id")}`
+    }
 
 })

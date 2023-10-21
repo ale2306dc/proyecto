@@ -14,15 +14,58 @@
 
         <h1 class="text-center mb-5 text-3xl font-bold text-white" id="welcome"></h1>
 
-        <section class="flex-row justify-between">
+     <div class="flex justify-center gap-4">
+            <div class="max-w-5xl mb-3 w-auto min-w-full md:min-w-[55rem] items-center">
 
-    <div id="albumes" class="bg-gray-100 max-w-7xl flex flex-col p-6 mb-5 shadow-md shadow-black rounded-lg">
+                <div class="flex-row justify-center items-center">
+                    <input id="buscador" class="text-lg font-bold p-4 focus:outline-indigo-600 flex-col justify-center rounded-md w-full bg-gray-100 h-10" placeholder="¿Qué canción quieres escuchar?" type="text">                 
+                </div>
+
+            </div>
+
+     </div>
+
+     <div class="max-w-5xl mb-3 w-auto min-w-full items-center justify-center flex">
+        <div>
+            <form id="form" class="p-4 bg-gray-100 rounded-md flex gap-4 items-center justify-between" action="">
+                
+                <div class="flex items-center gap-4">
+
+                    <label for="profe">Profesor</label>
+                    <select class="h-8 w-[10rem] rounded-sm border-none font-bold" name="profe" id="profe">
+                        <option value="Christian">Christian</option>
+                        <option value="Premmlin">Premmlin</option>
+                        <option value="Leonardo">Leonardo</option>
+                        <option value="Arnaldo">Arnaldo</option>
+                        <option value="Rut">Rut</option>
+                    </select>
+
+                    <label for="aula">Aula</label>
+                    <select class="h-8 w-[10rem] rounded-sm border-none font-bold" name="aula" id="aula">
+                        <option value="Batería">Batería</option>
+                        <option value="Bajo">Bajo</option>
+                        <option value="Guitarra">Guitarra</option>
+                        <option value="Piano/Teclado">Piano/Teclado</option>
+                        <option value="Canto">Canto</option>
+                    </select>
+                </div>
+
+                <div>
+                    <button class="py-2 px-8 bg-indigo-700 text-white transition ease-in-out hover:bg-indigo-900 rounded-md" id="filtro">Filtrar</button>
+                </div>
+
+            </form>
+        </div>
+     </div>
+
+       
+    <section class="flex-row justify-center">
+ 
+    <div id="albumes" class="bg-gray-100 max-w-7xl w-auto flex flex-col p-6 mb-5 shadow-md shadow-black rounded-lg">
           
         <h2 class="text-2xl font-bold mb-5">Canciones subidas</h2>
    
-    <div id="data-cont" class="grid grid-cols-2 md:grid-cols-5 gap-11">
-
-        <div class="hidden text-5xl font-bold" id="texto"></div>
+    <div id="data-cont" class="grid  justify-center grid-cols-2 md:grid-cols-5 gap-11">
 
     </div>
 
@@ -33,7 +76,11 @@
                 SUBIR CANCION
             </div></a>
 
-            <a href="/admin/"><div id="admin" class="hidden bg-gray-100 max-w-3xl px-8 py-4 hover:translate-y-[0.2rem] font-bold text-center hover:bg-gray-600 transition ease-in-out rounded-md">
+            <a id="adminA" href="/admin/"><div id="admin" class="hidden bg-gray-100 max-w-3xl px-8 py-4 hover:translate-y-[0.2rem] font-bold text-center hover:bg-gray-600 transition ease-in-out rounded-md">
+                ADMINISTRAR
+            </div></a>
+
+            <a id="userA" href="/user/"><div id="user" class="hidden bg-gray-100 max-w-3xl px-8 py-4 hover:translate-y-[0.2rem] font-bold text-center hover:bg-gray-600 transition ease-in-out rounded-md">
                 ADMINISTRAR
             </div></a>
 
@@ -94,9 +141,9 @@
     </section>
 
     </main>
-
-    <script src="index.js"></script>
+    
     <script src="../reproductor/index.js"></script>
+    <script src="index.js"></script>
    
 </body> 
 </html>

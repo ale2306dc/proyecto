@@ -4,288 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Usuario</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class="mb-5">
+<body class="bg-indigo-950 flex items-center justify-center">
 
-        <nav id="navegacion" class="rounded-xl left-0 top-0 right-0 h-16 bg-indigo-600 shadow-md shadow-black">
-        <div class="max-w-7xl h-16 mx-auto flex items-center px-4 justify-between">
-            <p class="font-bold text-xl text-white">Logo</p>
-            
-            <!--movil-->
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke-width="1.5" 
-                stroke="currentColor" 
-                class="w-10 h-10 md:hidden cursor-pointer p-2 hover:bg-blue-500 rounded-lg text-white">
-                
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
-            </svg>
+    <main class="flex justify-center flex-col py-[5rem]">
 
-              <!--escritorio-->
-              <div class="hidden md:flex flex-row gap-4">
-                <div class="h-10 w-10">
-                    <a id="userButton" class="hover:cursor-pointer" data-dropdown-toggle="userContent" data-dropdown-trigger="hover" data-dropdown-delay="500">
-                        <img src="/img/profile.webp" alt="" class="rounded-full">
-                    </a>
-                    <div id="userContent" class="z-10 hidden bg-indigo-900 rounded-md">
-                        <ul class="py-3 text-sm" aria-labelledby="userButton">
-                          <li>
-                            <a href="../entrar/index.html">
-                            <div class="hover:bg-indigo-700 hover:cursor-pointer transition ease-in-out duration-300 flex flex-row justify-between gap-5 items-center h-12 p-2 w-[10rem] text-white font-bold rounded-md">
-                                
-                                
-                                Ingresar
-                            </div></a>
-                          </li>
-                          <li>
-                            <a href="../main/index.html">
-                            <div class="hover:bg-indigo-700 hover:cursor-pointer transition ease-in-out duration-300 flex flex-row justify-between gap-5 items-center h-12 p-2 w-[10rem] text-white font-bold rounded-md">
-                                Página Principal
-                            </div>  </a>
-                        </li>
-                        <li>
-                            <a href="../home/index.html">
-                            <div class="hover:bg-indigo-700 hover:cursor-pointer transition ease-in-out duration-300 flex flex-row justify-between gap-5 items-center h-12 p-2 w-[10rem] text-white font-bold rounded-md">
-                                Biblioteca
-                            </div>  </a>
-                        </li>
-                        </ul>
-                    </div>
-                </div>
-              </div>
-
-              <!--Movil Menu-->
-              <div class="bg-blue-900/60 top-16 right-0 left-0 bottom-0 justify-center flex-col gap-4 hidden text-center">
-              <a href="/login" class="transition ease-in-out text-white font-bold hover:bg-blue-700 py-2 px-4 rounded-lg ">Login</a>
-              <a href="/registro " class="transition ease-in-out bg-white text-black font-bold hover:bg-blue-700 py-2 px-4 rounded-lg">Registro</a>
-          </div>
-              
-            </div>
-        </nav>
-    </header>
-
-    <main class="flex justify-center">
-
-        <section class="flex flex-col bg-gray-100 max-w-7xl p-6 mb-5 shadow-md shadow-slate-400 rounded-lg">
-
+        <section class="flex flex-col bg-gray-100 w-auto max-w-7xl p-6 mb-5 shadow-md shadow-black rounded-lg">
 
             <div id="user">
-                
-                <h3 class="text-2xl font-bold my-4">Tus Canciones
 
-                    </h3>
+                <div  class="my-2 max-w-7xl">
+                    <h3 class="text-2xl font-bold my-4">Archivos Subidos</h3>
 
-                <div class="my-2 max-w-7xl">
-                    
-                    <div id="songs" class="flex flex-col gap-5">
-                    <!-- <div class="bg-indigo-900 shadow-md hover:translate-y-1 hover:bg-indigo-800 hover:cursor-pointer transition ease-in-out shadow-gray-500 text-white flex flex-row justify-between items-center p-2 w-auto h-14 rounded-md">
-                        <div class="h-12 w-12">
-                            <img src="/img/Dynamo.jpg" alt="">
-                        </div>
-                        
-                        <p class="font-semibold text-xl" >Fue</p>
-                        <p>Fecha</p>
-                    </div> -->
+                    <div id="tracks" class="flex flex-col gap-5 w-[25rem] md:w-[45rem]">
+            
 
-                    <div class="bg-indigo-900 shadow-md hover:translate-y-1 hover:bg-indigo-800 hover:cursor-pointer transition ease-in-out shadow-gray-500 text-white flex flex-row justify-between items-center p-2 w-auto h-14 rounded-md">
-                        <div class="h-12 w-12">
-                            <img src="/img/Dynamo.jpg" alt="">
-                        </div>
-                        
-                        <p class="font-semibold text-xl">Fue</p>
-                        <p>Fecha</p>
-                    </div>
-                </div>
-
-                <a href="/home#boo/">hola</a>
-
+                        <div class="hidden text-5xl font-bold" id="texto"></div>
             </div>
 
-            <div class="my-4">
-
-                <h3 class="text-2xl my-4 font-bold">Tus Albumes</h3>
-
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-11">
+            
         
-                    <!--Album-->
-            
-                    <div id="test" class="w-[12rem] h-[18rem] p-3 bg-gray-300 flex flex-col rounded-md hover:cursor-pointer hover:bg-gray-500 hover:translate-y-1 shadow-md shadow-slate-400 transition ease-in-out">
-            
-                        <a href="../album/index.html">
-            
-                            <div class="flex items-center justify-center">
-                             <img id="1" src="" class="image rounded-sm" alt="">
-                            
-                            </div>
-                            <p id="1" class="font-bold mt-3 text-lg title album"></p>
-            
-                            <div class="flex flex-row justify-between items-end">
-                                <p id="1" class="text-md artist"></p>
-            
-                                <p id="1" class="year text-sm text-gray-600"></p>
-                            </div>
-                        </a>
-                      
-                    </div>
-            
-                    <!--Album-->
-            
-                    <div class="w-[12rem] h-[18rem] p-3 bg-gray-300 flex flex-col rounded-md hover:cursor-pointer hover:bg-gray-500 shadow-md shadow-slate-400 transition ease-in-out hover:translate-y-1">
-                        <img id="2" class="rounded-sm image" src="" alt="">
-            
-                        <p id="2" class="title font-bold mt-3 text-lg"></p>
-            
-                        <div class="flex flex-row justify-between items-end">
-                            <p id="2" class="text-md artist"></p>
-            
-                            <p id="2" class="text-sm text-gray-600 year"></p>
-                        </div>
-                    </div>
-            
-                    <!--Album-->
-            
-                    <div class="w-[12rem] h-[18rem] p-3 bg-gray-300 flex flex-col rounded-md hover:cursor-pointer hover:bg-gray-500 shadow-md shadow-slate-400 transition ease-in-out hover:translate-y-1">
-                        <img id="3" class="rounded-sm image" src="" alt="">
-            
-                        <p id="3" class="font-bold title mt-3 text-lg"></p>
-            
-                        <div class="flex flex-row justify-between items-end">
-                            <p id="3" class="text-md artist"></p>
-            
-                            <p id="3" class="text-sm text-gray-600 year"></p>
-                        </div>
-                    </div>
-            
-                    <!--Album-->
-            
-                    <div class="w-[12rem] h-[18rem] p-3 bg-gray-300 flex flex-col rounded-md hover:cursor-pointer hover:bg-gray-500 shadow-md shadow-slate-400 transition ease-in-out hover:translate-y-1">
-                        <img id="4" class="rounded-sm image" src="" alt="">
-            
-                        <p id="4" class="font-bold mt-3 text-lg title"></p>
-            
-                        <div class="flex flex-row justify-between items-end">
-                            <p id="4" class="text-md artist"></p>
-            
-                            <p id="4" class="text-sm text-gray-600 year"></p>
-                        </div>
-                       
-            
-                    </div>
-            
-                    <!--Album-->
-            
-                    <div class="w-[12rem] h-[18rem] p-3 bg-gray-300 flex flex-col rounded-md hover:cursor-pointer hover:bg-gray-500 shadow-md shadow-slate-400 transition ease-in-out hover:translate-y-1">
-                        <img id="5" class="rounded-sm image" src="" alt="">
-            
-                        <p id="5" class="font-bold mt-3 text-lg title"></p>
-            
-                        <div class="flex flex-row justify-between items-end">
-                            <p id="5" class="text-md artist"></p>
-            
-                            <p id="5" class="text-sm text-gray-600 year"></p>
-                        </div>
-                    </div>
-            
-                </div>
+            </div>
             
             </div>
-            <!------------------------------------>
-    
-            </div>
-            </div>
+            
+ <div id="mensaje"></div>
 
+ 
         </section>
 
-        <section>
 
-            <div id="reproductor" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="flex justify-center">
-                    <div class="h-[auto] w-[auto] bg-indigo-700 my-[10rem] rounded-3xl border-indigo-500 border-[.5rem] flex flex-col justify-center shadow-2xl shadow-black">
-            
-                       
-            
-                        <div>
-                            <audio src="" id="audio"></audio>
-                        </div>
-            
-                        <div class="my-3 flex justify-center">
-                        <div id="image">
-                            
-            
-            <button id="playlistButton" data-dropdown-toggle="playlistContent" data-dropdown-trigger="hover" data-dropdown-delay="500" type="button" class=" hover:bg-indigo-700 focus:border-indigo-500 absolute bg-indigo-900 rounded-md text-white m-2 "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-              </svg></button>
-            <div id="playlistContent" class="z-10 hidden bg-indigo-900 rounded-md">
-                <ul class="py-3 text-sm" aria-labelledby="playlistButton">
-                  <li id="2" class="songPlay">
-                    <div class="hover:bg-indigo-700 hover:cursor-pointer transition ease-in-out duration-300 flex flex-row justify-between gap-5 items-center h-12 p-2 w-[20rem] text-white font-bold rounded-md">
-                        <img class="h-11" src="/img/Toxicity.jpg" alt="">
-                        <p>Aerials</p>
-                        <p>System of a Down</p>
-                    </div>
-                  </li>
-                  <li id="5" class="songPlay">
-                    <div class="hover:bg-indigo-700 hover:cursor-pointer transition ease-in-out duration-300 flex flex-row justify-between gap-5 items-center h-12 p-2 w-[20rem] text-white font-bold rounded-md">
-                        <img class="h-11" src="/img/Humbug.jpg" alt="">
-                        <p>Cornerstone</p>
-                        <p>Arctic Monkeys</p>
-                    </div>  
-                </li>
-                </ul>
-            </div>
-                        </div>
-                        </div>
-                        <div id="dataText" class=" gap-3 flex flex-row justify-between mx-4 my-4 items-end">
-                            <div id="title" class="text-[2rem] font-bold text-slate-300">
-                             
-                             </div>
-                        <div><p id="artist" class="text-sm text-slate-300"></p></div>
-                            
-                        </div>
-                
-                        <div id="progress" class=" flex justify-center">
-                            <progress class="w-[100%] m-3 transition ease-in-out" value="0" max="100"></progress>
-                        </div>
-            
-                        <div id="controles" class="flex flex-row justify-center gap-16 mx-4 my-2">
-                            
-                            <div id="back" class="bg-slate-300 flex justify-center rounded-full h-[4.5rem] w-[4.5rem] items-center hover:cursor-pointer hover:bg-slate-400 hover:translate-y-1 transition ease-in-out border-[.3rem] border-slate-400">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953l7.108-4.062A1.125 1.125 0 0121 8.688v8.123zM11.25 16.811c0 .864-.933 1.405-1.683.977l-7.108-4.062a1.125 1.125 0 010-1.953L9.567 7.71a1.125 1.125 0 011.683.977v8.123z" />
-                                    </svg>
-                            </div>
-                
-                            <div id="play_pause" class="bg-indigo-950 flex justify-center rounded-full h-[4.5rem] w-[4.5rem] items-center hover:cursor-pointer hover:bg-indigo-900 hover:translate-y-1 transition ease-in-out border-[.3rem] border-indigo-900">
-            
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-white w-10 h-10">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z" />
-                                    <!-- <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />      -->
-                                </svg>
-                            </div>
-                
-                            <div id="next" class="bg-slate-300 flex justify-center rounded-full h-[4.5rem] w-[4.5rem] items-center hover:cursor-pointer hover:bg-slate-400 hover:translate-y-1 transition ease-in-out border-[.3rem] border-slate-400">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z" />
-                                </svg>
-                            </div>
-                        </div>     
-                            
-                    </div>
-                
-                </div>
+        <div class="flex justify-center gap-5">
+            <div id="cerrarSesion" class="px-8 py-4 hover:bg-red-600 bg-gray-100 rounded-md transition ease-in-out cursor-pointer text-red-600 hover:text-white font-bold">
+                Cerrar sesión
             </div>
 
-        </section>
+            <a href="/home/">
+            <div class="px-8 py-4 hover:bg-gray-600 bg-gray-100 rounded-md transition ease-in-out cursor-pointer  font-bold">
+                Volver
+            </div></a>
+        </div>
+       
     </main>
 
     <script src="index.js"></script>
-    <script src="../reproductor/index.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 </body>
 </html>

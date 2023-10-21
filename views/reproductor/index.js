@@ -45,15 +45,15 @@ playButton.addEventListener('click', () => {
 
     
 
-setTimeout(() => {    
+// setTimeout(() => {    
     
-    audio.addEventListener("timeupdate",progressUpdate);
+//     audio.addEventListener("timeupdate",progressUpdate);
 
-    progress.addEventListener("click", progressClick);
+//     progress.addEventListener("click", progressClick);
 
-    clickSong()
+//     clickSong()
 
-}, 1000);
+// }, 1000);
 
 
 function obtenerSong(){

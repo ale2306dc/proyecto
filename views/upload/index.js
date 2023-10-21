@@ -1,4 +1,6 @@
 const title = document.querySelector("#title");
+const profe = document.querySelector("#profe");
+const aula = document.querySelector("#aula");
 const cover = document.querySelector("#image");
 const audio = document.querySelector("#audio");
 const form = document.querySelector("#form");
@@ -74,7 +76,7 @@ async function uploadFile(e) {
 
   e.preventDefault();
   
-    if (!title.value || !audio.files || !cover.files) {
+    if (!title.value || !audio.files || !cover.files || !profe.value || !aula.value) {
     
       mostrarMensaje("Todos los campos son obligatorios", "error")
       return;
@@ -163,6 +165,8 @@ function rellenarObj(objAudio, objImg){
   const datosCancion = {
 
     _id: Date.now(),
+    profe: profe.value,
+    aula: aula.value,
     title: title.value,
     userID: localStorage.getItem("_id"),
     imgSrc: objImg.filename,
@@ -181,13 +185,13 @@ async function subirCancion(objCancion){
 
   console.log(objCancion);
 
-  mostrarSpinner()
-
   const urlCancion = "/api/songs"
 
   let test = 
      {
       _id: objCancion._id,
+    "profe": objCancion.profe,
+    "aula": objCancion.aula,
     "title": objCancion.title,
     "userID": objCancion.userID,
     "genre": objCancion.genre,
@@ -215,19 +219,11 @@ async function subirCancion(objCancion){
 
 function mostrarMensaje(mensaje,tipo){
 
-      // if (tipo == "error") {
-      //     alert(mensaje)
-      // }
-      
-      // if (tipo == "success"){
-      //     alert(mensaje)
-      // }
-
       const divMensaje = document.querySelector("#mensaje");
 
       if (tipo == "error") {
           divMensaje.innerHTML=`
-          <div class="max-w-4xl">
+          <div class="max-w-4xl flex justify-center">
               <div class="px-6 py-3 mb-4 text-lg text-white text-center rounded-lg bg-red-500 font-bold" role="alert">
                   ${mensaje}
               </div>
@@ -254,21 +250,4 @@ function mostrarMensaje(mensaje,tipo){
       }, 3000);
       }
 
-}
-
-function mostrarSpinner(){
-
-  const mensaje = document.querySelector("#mensaje")
-  const spinner = document.createElement('div');
-  spinner.classList.add('spinner');
-
-  spinner.innerHTML = `
-  
-  <div class = "bounce1"></div>
-  <div class = "bounce2"></div>
-  <div class = "bounce3"></div>
-  
-  `
-
-  mensaje.appendChild(spinner)
 }

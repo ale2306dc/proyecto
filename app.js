@@ -35,8 +35,10 @@ app.use("/reproductor", express.static(path.resolve("views", "reproductor")));
 app.use("/buscador", express.static(path.resolve("views", "buscador")));
 app.use("/user", express.static(path.resolve("views", "user")));
 app.use("/admin", express.static(path.resolve("views", "userAdmin")));
+app.use("/user", express.static(path.resolve("views", "user")));
 app.use("/delete", express.static(path.resolve("views", "delete")));
 app.use("/deleteUser", express.static(path.resolve("views", "deleteUser")));
+app.use("/edit", express.static(path.resolve("views", "edit")));
 
 // //IMPORTANTE
 app.use(express.json());

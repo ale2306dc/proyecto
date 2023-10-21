@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subir Archivos</title>
+    <title>Editar Archivos</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
@@ -14,7 +14,7 @@
     <main class="flex justify-center flex-col py-[5rem]">
         <section class="flex flex-col bg-gray-100 max-w-7xl p-6 mb-5 shadow-md shadow-black rounded-lg gap-4">
 
-           <h1 class="text-center text-6xl font-bold">Subir Archivo</h1>
+           <h1 class="text-center text-6xl font-bold">Editar Archivo</h1>
 
             <form id="form" class="flex flex-col gap-4">
 
@@ -44,24 +44,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row gap-4 bg-indigo-800 p-6 rounded-lg justify-center">
-                    <div class="flex flex-col items-center gap-2 text-white font-semibold">
-                        <label for="archivo" class="text-center text-lg">Cover</label>
-                        <input id="image" type="file" name="imgUpload">
-                        <p class="font-thin text-sm">* Solo se permiten archivos con la extensión .jpg y .png</p>
-                        <img class="h-16 w-16" id="imgPre">
-                    </div>
-                    <div class="flex flex-col text-white font-semibold items-center gap-2">
-                        <label for="cover" class="text-center text-lg font-semibold">Audio</label>
-                        <input id="audio" type="file" name="audioUpload">
-                        <p class="font-thin text-sm">* Solo se permiten archivos con la extensión .mp3</p>
-                        <audio id="audioPre" src="" controls></audio>
-                    </div>
-
-                    </div>
-                    <p class="text-red-700 p-4 bg-gray-300 rounded-md flex justify-center font-bold">Una vez subida la canción, solo podrás editar Título, Profesor y Aula</p>
                 
-                <button id="btnUpload" type="submit" class="w-6/12 self-center h-[3rem] text-xl rounded-lg font-bold bg-indigo-900 text-white hover:translate-y-1 hover:bg-indigo-700 transition ease-in-out">Subir Canción</button>
+                <button id="btnUpload" type="submit" class="w-6/12 self-center h-[3rem] text-xl rounded-lg font-bold bg-indigo-900 text-white hover:translate-y-1 hover:bg-indigo-700 transition ease-in-out">Subir Actualización</button>
             </form>
 
             <div id="mensaje" class="flex justify-center">
