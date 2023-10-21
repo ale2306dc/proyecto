@@ -29,8 +29,9 @@
         <div>
             <form id="form" class="p-4 bg-gray-100 rounded-md flex gap-4 items-center justify-between" action="">
                 
-                <div class="flex items-center gap-4">
+                <div class="flex flex-col md:flex-row items-center gap-4">
 
+                    <div>
                     <label for="profe">Profesor</label>
                     <select class="h-8 w-[10rem] rounded-sm border-none font-bold" name="profe" id="profe">
                         <option value="Christian">Christian</option>
@@ -39,7 +40,9 @@
                         <option value="Arnaldo">Arnaldo</option>
                         <option value="Rut">Rut</option>
                     </select>
+                    </div>
 
+                    <div>
                     <label for="aula">Aula</label>
                     <select class="h-8 w-[10rem] rounded-sm border-none font-bold" name="aula" id="aula">
                         <option value="Batería">Batería</option>
@@ -48,6 +51,8 @@
                         <option value="Piano/Teclado">Piano/Teclado</option>
                         <option value="Canto">Canto</option>
                     </select>
+                </div>
+
                 </div>
 
                 <div>
@@ -61,11 +66,11 @@
        
     <section class="flex-row justify-center">
  
-    <div id="albumes" class="bg-gray-100 max-w-7xl w-auto flex flex-col p-6 mb-5 shadow-md shadow-black rounded-lg">
+    <div id="albumes" class="bg-gray-100 max-w-7xl w-[29rem] md:w-auto flex flex-col p-6 mb-5 shadow-md shadow-black rounded-lg">
           
         <h2 class="text-2xl font-bold mb-5">Canciones subidas</h2>
    
-    <div id="data-cont" class="grid  justify-center grid-cols-2 md:grid-cols-5 gap-11">
+    <div id="data-cont" class="grid justify-center grid-cols-2 md:grid-cols-5 gap-11">
 
     </div>
 
